@@ -1,0 +1,21 @@
+
+
+.searchForm {
+    font: inherit;
+    padding: 8px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    border-radius: 4px;
+
+
+}
+
+#search-box:focus {
+    outline-color: blue;
+}
+
+#search-form input {
+    width: 240px;
+}
