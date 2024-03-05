@@ -11,16 +11,17 @@ export default function SearchBar({ onSearch }) {
         actions.resetForm();
       }}
     >
-      <header>
+      <header className={css.box}>
         <Form className={css.searchForm}>
           <Field
+            className={css.input}
             type="text"
             name="query"
             autoComplete="off"
             autoFocus
             placeholder="Search images and photos"
           /> 
-          <button type="submit">Search</button>
+          <button  type="submit">Search</button>
         </Form>
       </header>
     </Formik>

@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import "../../../node_modules/modern-normalize/modern-normalize.css";
-import css from "./App.module.css";
-import ImageGallery from "../ImageGallery/ImageGallery";
-import SearchBar from "../SearchBar/SearchBar";
+import "../../../node_modules/modern-normalize/modern-normalize.css"; 
 import { fetchImages } from "../../image-api";
+import ImageGallery from "../ImageGallery/ImageGallery";
+import SearchBar from "../SearchBar/SearchBar";  
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
+import Loader from "../Loader/Loader";
+import css from "./App.module.css";
 
 export default function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -55,16 +58,14 @@ export default function App() {
   return (
     <div className={css.container}>
       <SearchBar onSearch={handleSearch} />
-      {error && <b>Oops! Error! Reload!</b>}
+      <div className={css.main}>
+      {error && <ErrorMessage message={`Oops! Error! Reload!`} />}
       {images.length > 0 && <ImageGallery items={images} />}
       {images.length > 0 && !isLoading && (
-        <button onClick={handleLoadMore}>Load more</button>
+        <LoadMoreBtn onClick={handleLoadMore}/>
       )}
-      {isLoading && (
-        <p>
-          <b>Loading images...</b>
-        </p>
-      )}
-    </div>
+      {isLoading && <Loader message={`Loading images...`} />}
+      </div>
+      </div>
   );
 }

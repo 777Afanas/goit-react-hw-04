@@ -3,8 +3,14 @@
   /* display: flex;
   flex-direction: column;
   gap: 24px; */
+  text-align: center;
 }
 
+.main {
+  margin: 0 auto;
+    /* display: block; */
+    text-align: center;
+}
 /* 
 
 #root {
