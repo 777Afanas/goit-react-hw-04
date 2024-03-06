@@ -16,7 +16,14 @@ export const fetchImages = async (searchQuery, page) => {
       }
   });  
   
-    return response.data.results; 
+  return response.data.results; 
+  // return
+  
+  // {
+  //   imageData: response.data.results,
+  //   totalPages: response.data.total_pages,
+
+  // }
 }
 
 
