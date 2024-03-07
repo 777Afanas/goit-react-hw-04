@@ -7,7 +7,8 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import Loader from "../Loader/Loader";
 import css from "./App.module.css";
-import ImageModal  from "../ImageModal/ImageModal";
+import ImageModal from "../ImageModal/ImageModal";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -93,7 +94,8 @@ export default function App() {
           onClose={closeModal}
           image={selectedImage}
         />
-      )}
+        )}
+         <Toaster position="top-center" />
       </div>
       </div>
   );

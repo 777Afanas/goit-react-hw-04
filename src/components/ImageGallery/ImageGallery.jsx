@@ -1,5 +1,5 @@
 import css from "./ImageGallery.module.css"; 
-import ImageCart from "../ImageCard/ImageCard";
+import ImageCard from "../ImageCard/ImageCard";
 
 export default function ImageGallery({ items, openModal }) {
   
@@ -9,7 +9,7 @@ export default function ImageGallery({ items, openModal }) {
       {items.map((item) => (
         <li key={item.id}>
           {/* <ImageCart item={item} onClick = {() => openModal(item)} />		   */}
-        <ImageCart image={item} onClick = {() => openModal(item)} />		  
+        <ImageCard image={item} onClick = {() => openModal(item)} />		  
         </li>
       ))}
     </ul>
