@@ -95,11 +95,11 @@ export default function App() {
           image={selectedImage}
         />
         )}
-         <Toaster position="top-center" />
+         <Toaster position="top" />
       </div>
       </div>
   );
 
-   
+ 
                
 }
