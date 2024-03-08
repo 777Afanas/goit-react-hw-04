@@ -10,7 +10,8 @@ export default function SearchBar({ onSearch }) {
        
          if (!values.query) {
            toast.error("Please enter a search query", 
-           );           
+           );
+           return;
         }
          onSearch(values.query);
         actions.resetForm();
